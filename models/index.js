@@ -1,3 +1,5 @@
-const User = require('./User');
+const User = require('./User'); // renamed to lowercase U
+const Thought = require('./thought');
 
-module.exports = { User };
+module.exports = { User, Thought };
+
