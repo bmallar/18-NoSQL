@@ -18,7 +18,7 @@ const reactionSchema = new Schema(
       createdAt: {
         type: Date,
         default: Date.now(),
-        get: timeStamp => dayjs(timeStamp).format('DD/MM/YYYY')
+        get: timeStamp => dayjs(timeStamp).format('DD/MM/YYYY') // '25/01/2019'
       },
     },
     {

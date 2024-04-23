@@ -19,4 +19,8 @@ router
   .put(updateUser)
   .delete(deleteUser);
 
+  router
+  .route('./:friends')
+  .post(addFriend) // is adding a friend a post or put 
+  .delete(removeFriend)
 module.exports = router;
