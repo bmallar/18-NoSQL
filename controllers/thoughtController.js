@@ -15,7 +15,7 @@ const thoughtController = {
     async getSingleThought(req, res) {
         try {
             const dbThoughtData = await Thought.findOne({ _id: req.params.thoughtId})
-            .populate('')
+            .populate('reactions')
 
             res.json(dbThoughtData)
         } catch(err) {
@@ -59,7 +59,7 @@ async updateThought(req, res) {
 
   async deleteThought(req, res) {
     try {
-      const dbThoughtData = await User.findOneAndDelete({ _id: req.params.thoughtId })
+      const dbThoughtData = await Thought.findOneAndDelete({ _id: req.params.thoughtId })
 
     
      
