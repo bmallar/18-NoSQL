@@ -70,6 +70,28 @@ async updateThought(req, res) {
     }
   },
 
+  async createReaction(req, res) {
+    try {
+      const dbReactionData = await Thought.create(req.body);
+      res.json(dbReactionData);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  },
+
+  async deleteReaction(req, res) {
+    try {
+      const dbReactionData = await Thought.findOneAndDelete({ _id: req.params.reactionId })
+
+    
+     
+      res.json({ message: 'Reaction deleted!' });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  }
 
 }
 

@@ -4,11 +4,10 @@ const {
   getSingleThought,
   createThought,
   updateThought,
-  deleteThought
+  deleteThought,
+  createReaction,
+  deleteReaction
 } = require('../../controllers/thoughtController.js');
-const {
-  createReaction, deleteReaction 
-} = require ('../../controllers/reactionController.js')
 
 
 // /api/courses
